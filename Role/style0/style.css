@@ -1,0 +1,71 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('/images/depositphotos_325837802-stock-photo-man-writing-in-office-cloud.jpg');
+      background-size: cover;
+      background-position: center;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      z-index: 1;
+    }
+
+  body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+    .logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+
+    .role-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  width: 600px;
+  text-align: center;
+  width: 800px;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .role-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .role-buttons a {
+      padding: 12px 25px;
+      background-color: #00b894;
+      color: white;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .role-buttons a:hover {
+      background-color: #019875;
+    }
