@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(25, 37, 87);
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+
+    width: 150px;
+    height: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.link {
+    text-decoration: none;
+    color: wheat;
+    font-size: 1.375rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Log In button style */
+.login-btn {
+    background-color: #0073e6;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 5px;
+    border: 2px solid #0073e6;
+    transition: background-color 0.3s, color 0.3s;
+   margin-top: -10px;
+}
+
+.login-btn:hover {
+    background-color: rgb(15, 179, 230);
+    color: #0e0d0d !important;
+}
+
+nav a:hover:not(.login-btn) {
+    color: #0ae5f5;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider {
+   position: absolute;
+   width: 300%;
+   height: 100%;
+   display: flex;
+    animation: slide 15s infinite ease-in-out;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.slide1 {
+    background-image: url('/images/pic2.jpg');
+}
+
+.slide2 {
+    background-image: url('/images/pic3.jpg');
+}
+
+.slide3 {
+    background-image: url('/images/pic3.png');
+}
+
+@keyframes slide {
+            0%, 33% { transform: translateX(0); }
+            34%, 66% { transform: translateX(-100vw); }
+            67%, 100% { transform: translateX(-200vw); }
+        }
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 80px;
+}
+
+.btn {
+  display: inline-block;
+    background-color: #0073e6;
+    color: white;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size:large;
+    overflow: hidden;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #0097a7;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease;
+}
+.btn:hover::after {
+  width: 200%;
+  height: 500%;
+}
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* footer part */
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 160px 0 160px 0;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 110px;
+}
+
+.footer-left {
+  flex: 1 1 250px;
+}
+
+.footer-logo {
+  margin-bottom: 16px;
+  width: 200px;
+  height: 200px;
+}
+
+.footer-para {
+  font-size: 1.375rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.footer-links {
+  flex: 2 1 400px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.link-column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.link-column a {
+  text-decoration: none;
+  color: #6B7280;
+  margin: 8px 0;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s;
+  
+}
+
+.link-column a:hover {
+  color: #221ef4;
+}
+
+.footer-social {
+  flex: 1 1 150px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  margin-top: 10px;
+}
+
+.footer-social img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.1);
+}
