@@ -23,8 +23,8 @@ header {
 
 .logo img {
 
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
 }
 
 nav ul {
@@ -36,7 +36,7 @@ nav ul {
 .link {
     text-decoration: none;
     color: wheat;
-    font-size: 1.375rem;
+    font-size: 1rem;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -103,7 +103,7 @@ nav a:hover:not(.login-btn) {
 
 .hero-text {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -113,7 +113,7 @@ nav a:hover:not(.login-btn) {
 }
 
 .hero-text h1 {
-    font-size: 3.5em;
+    font-size: 3em;
     margin-bottom: 15px;
 }
 
@@ -124,13 +124,13 @@ nav a:hover:not(.login-btn) {
 
 .btn {
   display: inline-block;
-    background-color: #0073e6;
+    background-color: #481191;
     color: white;
     padding: 20px 40px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-weight: bold;
-    font-size:large;
+    font-size:medium;
     overflow: hidden;
   position: relative;
   transition: background 0.3s;
@@ -161,6 +161,21 @@ nav a:hover:not(.login-btn) {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+.progress-section {
+          
+          max-width: 1140px;
+          margin: 0 auto;
+            margin-top: 40px;
+  
+        }
+
+        canvas {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
 
 /* footer part */
 .footer {

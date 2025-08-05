@@ -1,0 +1,230 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      font-family: 'Inter', sans-serif;
+      background: #5eabc262;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #092757;
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 100px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav ul li a:hover{
+      color: #0e8360;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    main {
+      padding: 40px;
+      max-width: 1200px;
+      margin:0 auto;
+      
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #1f2937;
+      font-size: 2rem;
+    }
+
+    /* Overview main toggle */
+
+    #showEmployeesToggle {
+      display: none;
+    }
+
+    label[for="showEmployeesToggle"] {
+      display: inline-block;
+      background: linear-gradient(to right, #4f46e5, #06b6d4);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      user-select: none;
+      transition: background 0.3s ease;
+      margin-bottom: 50px;
+    }
+
+    label[for="showEmployeesToggle"]:hover {
+      background: linear-gradient(to right, #4338ca, #0ea5e9);
+    }
+
+    /* Container that holds all employees - hidden by default */
+    .employees-container {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    /* Show employees container when checkbox checked */
+    #showEmployeesToggle:checked ~ .employees-container {
+      max-height: 3000px; /* large enough to fit all */
+      margin-bottom: 40px;
+    }
+
+    /* Employee Accordion */
+
+    .accordion {
+      max-width: 900px;
+    }
+
+    /* Hide individual employee checkboxes */
+    .employee-toggle {
+      display: none;
+    }
+
+    .employee-label {
+      display: block;
+      background: linear-gradient(to right, #4f46e5, #06b6d4);
+      color: white;
+      padding: 15px 20px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .employee-label:hover {
+      background: linear-gradient(to right, #4338ca, #0ea5e9);
+    }
+
+    .employee-info {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.5s ease;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 0 20px;
+      margin-bottom: 15px;
+    }
+
+    /* Show employee info when their checkbox is checked */
+    .employee-toggle:checked + .employee-label + .employee-info {
+      max-height: 500px;
+      padding: 20px;
+    }
+
+    .employee-info p {
+      color: #374151;
+      margin: 8px 0;
+    }
+
+    /* Buttons inside employee info */
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .buttons button {
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      color: white;
+    }
+
+    .assign-btn {
+      background: #34d399;
+    }
+
+    .assign-btn:hover {
+      background: #059669;
+    }
+
+    .recommend-btn {
+      background: #60a5fa;
+    }
+
+    .recommend-btn:hover {
+      background: #3b82f6;
+    }
+
+    .remove-btn {
+      background: #ef4444;
+    }
+
+    .remove-btn:hover {
+      background: #dc2626;
+    }
+
+    /* Cards for tasks and quizzes */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: linear-gradient(to right, #667eea, #764ba2);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+    .card button {
+      background-color: #c0e733;
+      color: black;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .card button:hover{
+      background-color: #a4cc13;
+    }

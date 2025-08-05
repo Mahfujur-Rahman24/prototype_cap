@@ -19,5 +19,35 @@
     </div>
   </div>
 
+   <script>
+        const ctx = document.getElementById('progressChart');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Module 1', 'Module 2', 'Module 3', 'Module 4'],
+                datasets: [{
+                    label: 'Completion (%)',
+                    data: [80, 65, 90, 50],
+                    backgroundColor: [
+                        '#6366f1',
+                        '#60a5fa',
+                        '#facc15',
+                        '#34d399'
+                    ],
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>

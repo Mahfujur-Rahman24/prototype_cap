@@ -11,6 +11,8 @@
     
     <title>SkillTrack Style Website</title>
     <link rel="stylesheet" href="Styling/style2.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!-- Header -->
@@ -40,6 +42,13 @@
             <a href="/main2/index3.html" class="btn">Start Training</a>
         </div>
     </section>
+
+    <main>
+      <section id="progress" class="progress-section">
+            <h2>Your Progress</h2>
+            <canvas id="progressChart" width="1000" height="400"></canvas>
+        </section>
+    </main>
 
     <footer class="footer">
     <div class="footer-container">
@@ -75,5 +84,36 @@
     </div>
   </div>
 </footer>
+  <script>
+        const ctx = document.getElementById('progressChart');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Module 1', 'Module 2', 'Module 3', 'Module 4', 'Module 5', 'Module 6 '],
+                datasets: [{
+                    label: 'Completion (%)',
+                    data: [80, 65, 90, 50, 70, 95],
+                    backgroundColor: [
+                        '#6366f1',
+                        '#60a5fa',
+                        '#facc15',
+                        '#34d399',
+                        '#6366f1',
+                        '#60a5fa'
+                    ],
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
